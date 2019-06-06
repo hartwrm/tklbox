@@ -6,7 +6,8 @@ const lureSchema = new Schema ({
   name: String,
   conditions: [String],
   img: String,
-  qty: {type: Number, min: 0}
+  qty: {type: Number, min: 0},
+  color: String
 }, {timestamps: true})
 
 const Lure = mongoose.model('Lure', lureSchema)

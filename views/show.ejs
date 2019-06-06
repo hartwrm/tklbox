@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <% include ./partials/head.ejs %>
+    <br>
+    <h1><%lures.name%></h1>
+    <div class="container">
+      <div class="lureimage">
+        <img src="<%=lures.img%>" alt="<%=lures.name%>">
+      </div>
+      <div class="lureinfo">
+        <p>Conditions: <%=lures.conditions%></p>
+        <p>Qty: <%=lures.qty%></p>
+        <p>Color: <%=lures.color%></p>
+      </div>
+
+    </div>
+  </body>
+</html>
