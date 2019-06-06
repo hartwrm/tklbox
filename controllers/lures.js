@@ -33,6 +33,22 @@ router.get('/plastics', (req, res) => {
   })
 })
 
+//////////
+//TOP WATER
+//////////
+router.get('/top', (req, res) => {
+  Lure.find({type: "Top water"}, (err, lures) => {
+    console.log(err);
+    if (err) {
+      res.send('X')
+    } else {
+      res.render('top.ejs',{
+        lures: lures
+      })
+    }
+  })
+})
+
 //////////////
 //SEED ROUTE
 /////////////
