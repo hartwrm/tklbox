@@ -85,6 +85,7 @@ router.get('/cjbait', (req, res) => {
 //JIGS
 //////////
 router.get('/jigs', (req, res) => {
+  console.log('jig route');
   Lure.find({type: 'Jig'}, (err, lures) => {
     console.log(err);
     if (err) {
