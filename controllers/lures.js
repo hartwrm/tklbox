@@ -81,6 +81,22 @@ router.get('/cjbait', (req, res) => {
   })
 })
 
+///////////
+//JIGS
+//////////
+router.get('/jigs', (req, res) => {
+  Lure.find({type: 'Jig'}, (err, lures) => {
+    console.log(err);
+    if (err) {
+      res.send('uh oh')
+    } else {
+      res.render('jigs.ejs',{
+        lures: lures
+      })
+    }
+  })
+})
+
 //////////////
 //SEED ROUTE
 /////////////
