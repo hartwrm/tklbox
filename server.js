@@ -6,7 +6,7 @@ const app = express()
 
 // Configuration
 const PORT = process.env.PORT || 3000
-const mongoURI = process.env.MONGO_URI ||'mongodb://localhost/' + `tklbox`
+const mongoURI = process.env.MONGODB_URI ||'mongodb://localhost/' + `tklbox`
 
 const luresController = require('./controllers/lures.js');
 app.use('/lures', luresController)
