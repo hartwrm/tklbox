@@ -1,6 +1,9 @@
 {
   "name": "tklbox",
   "version": "1.0.0",
+  "engines":{
+    "node": "12.3.1"
+  },
   "description": "tackle box app tklbox tackle box directory, help you figure out which lures to bring with you so you can minimize the amount of stuff you carry",
   "main": "server.js",
   "scripts": {

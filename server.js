@@ -5,8 +5,8 @@ require('dotenv').config()
 const app = express()
 
 // Configuration
-const PORT = process.env.PORT
-const mongoURI = process.env.MONGO_URI
+const PORT = process.env.PORT || 3000
+const mongoURI = process.env.MONGO_URI ||'mongodb://localhost/' + `tklbox`
 
 const luresController = require('./controllers/lures.js');
 app.use('/lures', luresController)
