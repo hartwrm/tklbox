@@ -49,6 +49,38 @@ router.get('/top', (req, res) => {
   })
 })
 
+////////////
+//SWIM route
+//////////
+router.get('/swim', (req, res) => {
+  Lure.find({type: 'Swim Bait'}, (err, lures) => {
+    console.log(err);
+    if (err) {
+      res.send('X')
+    }else {
+      res.render('swim.ejs', {
+        lures: lures
+      })
+    }
+  })
+})
+
+/////////
+//Crankbaits/jerkbaits
+////////////
+router.get('/cjbait', (req, res) => {
+  Lure.find({type: ['Crank Bait', 'Jerkbait']}, (err, lures) => {
+    console.log(err);
+    if (err) {
+      res.send('uh oh')
+    } else {
+      res.render('cjbait.ejs',{
+        lures: lures
+      })
+    }
+  })
+})
+
 //////////////
 //SEED ROUTE
 /////////////

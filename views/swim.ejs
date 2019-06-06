@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Swim Baits</title>
+  </head>
+  <body>
+    <% include ./partials/head.ejs %>
+    <h1>Swim Baits</h1>
+    <div class="container">
+        <% for(let i = 0; i<lures.length; i++) {%>
+          <div class="lure1">
+            <h3><a href="/lures/<%=lures[i].id%>"><%=lures[i].name%></a></h3>
+            <img src="<%=lures[i].img%>" alt="<%=lures[i].name%>">
+          </div>
+      <%  } %>
+    </div>
+  </body>
+</html>
