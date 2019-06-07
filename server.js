@@ -3,13 +3,21 @@ const methodOverride = require('method-override')
 const mongoose = require('mongoose')
 require('dotenv').config()
 const app = express()
+const session = require('express-session');
+
 
 // Configuration
 const PORT = process.env.PORT || 3000
 const mongoURI = process.env.MONGODB_URI ||'mongodb://localhost/' + `tklbox`
 
 const luresController = require('./controllers/lures.js');
+const usersController = require('./controllers/users.js');
+const sessionsController = require('./controllers/sessions.js');
+
 app.use('/lures', luresController)
+app.use('/users', usersController);
+app.use('/sessions', sessionsController);
+
 
 // Database
 mongoose.connect(mongoURI, { useNewUrlParser: true })
@@ -18,6 +26,11 @@ mongoose.connection.once('open', () => {
 })
 
 // Middleware
+app.use(session({
+  secret: 'randomstring',
+  resave: false,
+  saveUnitialized: false
+}))
 //use put and delete methods
 app.use(methodOverride('_method'))
 // parses info from input fields into an object
@@ -27,9 +40,7 @@ app.use(express.static('public'))
 
 
 
-// app.get('/', (req, res) => {
-//     res.render('index.ejs')
-// })
+
 
 // Listen
 app.listen(PORT, () => console.log('this is major tom on: ', PORT))
