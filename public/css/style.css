@@ -2,6 +2,8 @@
   border: 1px solid black;
 }
 
+
+
 nav{
   display: flex;
   justify-content: space-around;
@@ -22,5 +24,14 @@ nav{
 }
 
 img{
+  max-width: 40%;
+}
+
+h1{
+  text-align: center;
+}
+
+.lure1{
+  text-align: center;
   max-width: 40%;
 }
