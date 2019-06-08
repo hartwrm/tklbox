@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../models/users.js');
+const bcrypt = require('bcrypt')
 
 
 
@@ -8,7 +9,9 @@ router.get('/login', (req, res) => {
   res.render('sessions/login.ejs')
 })
 
-router.post('/lures', (req, res) => {
+//log in
+router.post('/', (req, res) => {
+  console.log(req.body);
   User.findOne({username: req.body.username}, (err, foundUser) => {
     if (!foundUser) {
       res.send('Can not find user')

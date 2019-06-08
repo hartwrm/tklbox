@@ -25,21 +25,25 @@ mongoose.connection.once('open', () => {
   console.log('connected to mongo')
 })
 
+
+//use put and delete methods
+app.use(methodOverride('_method'))
 // Middleware
+app.use(express.json());
 app.use(session({
   secret: 'randomstring',
   resave: false,
   saveUnitialized: false
 }))
-//use put and delete methods
-app.use(methodOverride('_method'))
 // parses info from input fields into an object
 app.use(express.urlencoded({ extended: true }))
-app.use(express.json());
 app.use(express.static('public'))
 
-
-
+app.get('/', (req, res) => {
+  res.render('index.ejs', {
+    currentUser: req.session.currentUser
+  })
+})
 
 
 // Listen

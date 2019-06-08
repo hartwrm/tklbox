@@ -20,6 +20,7 @@ router.get('/', (req, res) => {
 router.get('/add', (req, res) => {
   res.render('add.ejs')
 })
+
 ///////////
 //plastic page
 /////////////
@@ -191,7 +192,7 @@ router.get('/seed', (req, res) => {
 })
 })
 
-///////////
+/////////////
 //SHOW ROUTE
 ////////////
 router.get('/:id', (req, res) => {
@@ -205,7 +206,16 @@ router.get('/:id', (req, res) => {
 /////////////
 //CREATE
 /////////////
-router.post('/', (req, res) => {
+router.post('/plastics', (req, res) => {
+  Lure.create(req.body, (err, newLure) => {
+    if (err) {
+      res.send('invalid entry')
+      console.log(err);
+    } else {
+      console.log(newLure);
+      res.redirect('/')
+    }
+  })
 })
 
 
