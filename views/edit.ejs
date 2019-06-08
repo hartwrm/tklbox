@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Edit Lure</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="newform">
+        <form class="" action="/lures/<%=lures.id%>?_method=PUT" method="POST">
+          <label for="type">Type:</label>
+          <input id="type" type="text" name="type" value="<%=lures.type%>">
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" value="<%=lures.name%>">
+          <label for="conditions">Best Conditions:</label>
+          <input type="text" name="conditions" id="conditions" value="<%=lures.conditions%>">
+          <label for="img">Image Link:</label>
+          <input type="text" name="img" id="img" value="<%=lures.img%>">
+          <label for="qty">Quantity:</label>
+          <input type="number" name="qty" id="qty" value="<%=lures.qty%>">
+          <label for="color">Color:</label>
+          <input type="text" name="color" id="color" value="<%=lures.color%>">
+          <button type="sumbit" name="submit">Submit Changes</button>
+        </form>
+  </body>
+</html>

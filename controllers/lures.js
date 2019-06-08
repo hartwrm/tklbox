@@ -204,9 +204,25 @@ router.get('/:id', (req, res) => {
 })
 
 /////////////
+//Edit
+//////////
+router.get('/:id/edit', (req, res) => {
+  Lure.findById(req.params.id, (err, lures) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.render('edit.ejs',{
+        lures: lures
+      })
+    }
+  })
+})
+
+
+/////////////
 //CREATE
 /////////////
-router.post('/plastics', (req, res) => {
+router.post('/', (req, res) => {
   Lure.create(req.body, (err, newLure) => {
     if (err) {
       res.send('invalid entry')

@@ -11,12 +11,12 @@ const PORT = process.env.PORT || 3000
 const mongoURI = process.env.MONGODB_URI ||'mongodb://localhost/' + `tklbox`
 
 const luresController = require('./controllers/lures.js');
-const usersController = require('./controllers/users.js');
-const sessionsController = require('./controllers/sessions.js');
+// const usersController = require('./controllers/users.js');
+// const sessionsController = require('./controllers/sessions.js');
 
 app.use('/lures', luresController)
-app.use('/users', usersController);
-app.use('/sessions', sessionsController);
+// app.use('/users', usersController);
+// app.use('/sessions', sessionsController);
 
 
 // Database
