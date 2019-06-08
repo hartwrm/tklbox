@@ -61,3 +61,17 @@ h1{
   text-align: center;
   max-width: 40%;
 }
+
+.big-btn{
+  border-radius: 10px;
+  width: 90px;
+  height: 40px;
+  border: 1px solid #BFBFBF;
+  background-color: white;
+  box-shadow: 10px 10px 5px black;
+}
+
+.big-btn:hover{
+  cursor: pointer;
+  box-shadow: none;
+}

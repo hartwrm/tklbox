@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/skeleton.css">
+    <link rel="stylesheet" href="/css/style.css">
     <meta charset="utf-8">
     <title>Edit Lure</title>
   </head>
   <body>
+    <% include ./partials/head.ejs %>
     <div class="container">
       <div class="newform">
         <form class="" action="/lures/<%=lures.id%>?_method=PUT" method="POST">
@@ -20,7 +24,7 @@
           <input type="number" name="qty" id="qty" value="<%=lures.qty%>">
           <label for="color">Color:</label>
           <input type="text" name="color" id="color" value="<%=lures.color%>">
-          <button type="sumbit" name="submit">Submit Changes</button>
+          <button class="big-btn" type="sumbit" name="submit">Submit</button>
         </form>
   </body>
 </html>

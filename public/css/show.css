@@ -69,7 +69,7 @@ p{
   height: 40px;
   border: 1px solid #BFBFBF;
   background-color: white;
-  box-shadow: 10px 10px 5px #aaaaaa;
+  box-shadow: 10px 10px 5px black;
 }
 
 .big-btn:hover{
@@ -80,7 +80,7 @@ p{
 .med-btn{
   border: 1px solid #BFBFBF;
   background: white;
-  box-shadow: 3px 3px 3px #aaaaaa;
+  box-shadow: 3px 3px 3px black;
 }
 
 .med-btn:hover{
