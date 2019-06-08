@@ -45,6 +45,7 @@ a:hover{
   border: 1px solid black;
   margin: 10px;
   background-color: white;
+  opacity: .9;
   border-radius: 10px;
 }
 
