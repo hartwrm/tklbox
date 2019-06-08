@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router()
 const Lure = require('../models/lures.js')
-const User = require('../models/users.js');
+// const User = require('../models/users.js');
 
 
 
@@ -218,6 +218,20 @@ router.get('/:id/edit', (req, res) => {
   })
 })
 
+///////////
+//UPDATE
+//////////
+router.put('/:id', (req, res) => {
+  console.log('work');
+  Lure.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, lures) => {
+    if (err) {
+      console.log(err);
+    }else {
+      res.redirect(`/lures/${lures.id}`)
+    }
+  })
+})
+
 
 /////////////
 //CREATE
@@ -229,7 +243,7 @@ router.post('/', (req, res) => {
       console.log(err);
     } else {
       console.log(newLure);
-      res.redirect('/')
+      res.redirect('/lures')
     }
   })
 })

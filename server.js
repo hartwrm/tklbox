@@ -14,7 +14,6 @@ const luresController = require('./controllers/lures.js');
 // const usersController = require('./controllers/users.js');
 // const sessionsController = require('./controllers/sessions.js');
 
-app.use('/lures', luresController)
 // app.use('/users', usersController);
 // app.use('/sessions', sessionsController);
 
@@ -38,12 +37,14 @@ app.use(session({
 // parses info from input fields into an object
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static('public'))
+app.use('/lures', luresController)
 
-app.get('/', (req, res) => {
-  res.render('index.ejs', {
-    currentUser: req.session.currentUser
-  })
-})
+
+// app.get('/', (req, res) => {
+//   res.render('index.ejs', {
+//     currentUser: req.session.currentUser
+//   })
+// })
 
 
 // Listen
