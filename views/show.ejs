@@ -16,6 +16,10 @@
           <button class="big-btn" type="submit" name="add">Add to box</button>
         </form>
 
+        <form class="delete" action="/lures/<%=lures.id%>?_method=DELETE" method="POST">
+          <input class="big-btn" type="submit" value="DELETE">
+        </form>
+
         <div class="editbtn">
           <a href="/lures/<%=lures.id%>/edit"><button class="big-btn" type="submit" name="edit">Edit</button></a>
         </div>

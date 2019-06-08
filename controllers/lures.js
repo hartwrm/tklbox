@@ -248,6 +248,14 @@ router.post('/', (req, res) => {
   })
 })
 
+//////////
+//DESTROY
+/////////
+router.delete('/:id', (req, res) => {
+  Lure.findByIdAndRemove(req.params.id, (err, product) => {
+    res.redirect('/lures')
+  })
+})
 
 
 module.exports = router;
