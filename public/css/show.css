@@ -2,6 +2,12 @@
   border: 1px solid black;
 } */
 
+body{
+  background: url(https://media.istockphoto.com/photos/fishing-rods-and-reels-with-line-on-green-wooden-background-with-free-picture-id699509514?k=6&m=699509514&s=612x612&w=0&h=dhH2wJRGuY1ABTjBCz-0Q7mcYLFzEerWvYzUFadQaLs=);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 h1{
   text-align: center;
 }
@@ -10,13 +16,29 @@ nav{
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: darkslateblue;
+  color: #f3f3f7;
+  border-radius: 10px;
+}
+
+.navlink{
+  font-size: 20px;
+}
+
+a{
+  text-decoration: none;
+  color: #f3f3f7;
 }
 
 .container{
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+
+img{
+  border-radius: 10px;
 }
 
 .addform{
@@ -33,9 +55,16 @@ nav{
 
 label{
   font-weight: bolder;
+  font-size: 22px;
+}
+
+p{
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .big-btn{
+  border-radius: 10px;
   width: 90px;
   height: 40px;
   border: 1px solid #BFBFBF;
@@ -46,5 +75,19 @@ label{
 .big-btn:hover{
   cursor: pointer;
   box-shadow: none;
+}
 
+.med-btn{
+  border: 1px solid #BFBFBF;
+  background: white;
+  box-shadow: 3px 3px 3px #aaaaaa;
+}
+
+.med-btn:hover{
+  cursor: pointer;
+  box-shadow: none;
+}
+
+textarea{
+  border-radius: 10px;
 }
