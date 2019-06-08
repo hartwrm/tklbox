@@ -39,6 +39,7 @@ a{
 
 img{
   border-radius: 10px;
+  max-width: 80%;
 }
 
 .addform{
@@ -56,11 +57,14 @@ img{
 label{
   font-weight: bolder;
   font-size: 22px;
+  color: whitesmoke;
 }
 
 p{
   font-size: 20px;
   font-weight: bold;
+  color: whitesmoke;
+
 }
 
 .big-btn{
@@ -70,6 +74,7 @@ p{
   border: 1px solid #BFBFBF;
   background-color: white;
   box-shadow: 10px 10px 5px black;
+  color: black;
 }
 
 .big-btn:hover{
