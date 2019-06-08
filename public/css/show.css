@@ -1,6 +1,6 @@
-*{
+/* *{
   border: 1px solid black;
-}
+} */
 
 h1{
   text-align: center;
@@ -38,4 +38,13 @@ label{
 .big-btn{
   width: 90px;
   height: 40px;
+  border: 1px solid #BFBFBF;
+  background-color: white;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+.big-btn:hover{
+  cursor: pointer;
+  box-shadow: none;
+
 }

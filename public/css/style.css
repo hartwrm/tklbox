@@ -1,13 +1,24 @@
-*{
+/* *{
   border: 1px solid black;
+} */
+
+body{
+  background: url(https://cdn.pixabay.com/photo/2016/04/15/04/02/water-1330252__340.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
-
 
 nav{
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+a{
+  text-decoration: none;
+}
+a:hover{
+  color: red;
 }
 
 .container{
@@ -21,6 +32,10 @@ nav{
 .item1, .item2, .item3, .item4, .item5{
   max-width: 40%;
   text-align: center;
+  border: 1px solid black;
+  margin: 10px;
+  background-color: white;
+  border-radius: 10px;
 }
 
 img{
