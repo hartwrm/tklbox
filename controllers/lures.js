@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router()
 const Lure = require('../models/lures.js')
-// const User = require('../models/users.js');
+const User = require('../models/users.js');
 
 
 

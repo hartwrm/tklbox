@@ -52,6 +52,10 @@ img{
 
 .lureinfo{
   align-self: center;
+  background-color: darkslateblue;
+  border-radius: 10px;
+  padding: 5px;
+  opacity: .8;
 }
 
 label{
