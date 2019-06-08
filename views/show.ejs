@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link rel="stylesheet" href="/css/show.css">
     <meta charset="utf-8">
     <title></title>
   </head>
@@ -9,19 +10,26 @@
     <br>
     <h1><%=lures.name%></h1>
     <div class="container">
-        <form class="" action="index.html" method="post">
-          <button type="submit" name="add">Add to box</button>
+
+        <form class="addform" action="index.html" method="post">
+          <button class="big-btn" type="submit" name="add">Add to box</button>
         </form>
 
-      <a href="/lures/<%=lures.id%>/edit"><button type="submit" name="edit">Edit</button></a>
+        <div class="editbtn">
+          <a href="/lures/<%=lures.id%>/edit"><button class="big-btn" type="submit" name="edit">Edit</button></a>
+        </div>
+
 
       <div class="lureimage">
         <img src="<%=lures.img%>" alt="<%=lures.name%>">
       </div>
       <div class="lureinfo">
-        <p>Conditions: <%=lures.conditions%></p>
-        <p>Qty: <%=lures.qty%></p>
-        <p>Color: <%=lures.color%></p>
+        <label for="conditions">Conditions:</label>
+        <p id="conditions"><%=lures.conditions%></p>
+        <label for="qty">Qty:</label>
+        <p id="qty">Qty: <%=lures.qty%></p>
+        <label for="color">Color:</label>
+        <p id="color"><%=lures.color%></p>
       </div>
 
     </div>

@@ -1,0 +1,41 @@
+*{
+  border: 1px solid black;
+}
+
+h1{
+  text-align: center;
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.addform{
+  align-self: center;
+}
+
+.editbtn{
+  align-self: center;
+}
+
+.lureinfo{
+  align-self: center;
+}
+
+label{
+  font-weight: bolder;
+}
+
+.big-btn{
+  width: 90px;
+  height: 40px;
+}
