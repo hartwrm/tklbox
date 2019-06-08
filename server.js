@@ -14,8 +14,7 @@ const luresController = require('./controllers/lures.js');
 // const usersController = require('./controllers/users.js');
 // const sessionsController = require('./controllers/sessions.js');
 
-// app.use('/users', usersController);
-// app.use('/sessions', sessionsController);
+
 
 
 // Database
@@ -29,15 +28,18 @@ mongoose.connection.once('open', () => {
 app.use(methodOverride('_method'))
 // Middleware
 app.use(express.json());
-app.use(session({
-  secret: 'randomstring',
-  resave: false,
-  saveUnitialized: false
-}))
+// app.use(session({
+//   secret: 'randomstring',
+//   resave: false,
+//   saveUnitialized: false
+// }))
 // parses info from input fields into an object
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static('public'))
 app.use('/lures', luresController)
+// app.use('/users', usersController);
+// app.use('/sessions', sessionsController);
+
 
 
 // app.get('/', (req, res) => {
